@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Card, Image } from 'semantic-ui-react'
+import dynamic from 'next/dynamic'
 
 const mapProductsToItems = products =>
   products.map(({ id, name, image, description, meta }) => {
@@ -16,15 +17,17 @@ const mapProductsToItems = products =>
   })
 
 export default ({ products }) => (
-  <Card.Group
-    style={{
-      marginTop: '100px',
-      position: 'relative',
-      height: '450px',
-      width: '900px'
-    }}
-    items={mapProductsToItems(products)}
-    itemsPerRow="4"
-    stackable
-  />
+  <center>
+    <Card.Group
+      style={{
+        marginTop: '150px',
+        position: 'relative',
+        height: '450px',
+        width: '900px'
+      }}
+      items={mapProductsToItems(products)}
+      itemsPerRow="4"
+      stackable
+    />
+  </center>
 )

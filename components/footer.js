@@ -5,11 +5,13 @@ const Footer = () => (
   <Fragment>
     <footer
       style={{
-        position: 'relative',
+        position: 'absolute',
         height: '175px',
+        width: '100%',
         color: 'white',
         backgroundColor: 'black',
-        marginTop: '250px'
+        marginBottom: '0',
+        marginTop: '100px'
       }}
     >
       <div style={{ paddingLeft: '100px', paddingTop: '50px' }}>

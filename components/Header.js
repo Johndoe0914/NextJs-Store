@@ -17,7 +17,7 @@ export default ({ token }) => (
       inverted
       fixed="top"
       size="huge"
-      style={{ height: '100px', backgroundColor: 'transparent' }}
+      style={{ height: '100px', backgroundColor: 'white' }}
     >
       <Container text>
         {token ? (
@@ -34,12 +34,12 @@ export default ({ token }) => (
             // </Link>
           ]
         )}
-        <Link href="/shop" passHref prefetch key="register">
+        <Link href="/shop" passHref prefetch={true}>
           <Menu.Item style={{ color: 'Black' }} position="left">
             Shop
           </Menu.Item>
         </Link>
-        <Link href="/" prefetch passHref>
+        <Link href="/" prefetch={true} passHref>
           <center>
             {' '}
             <Menu.Item style={{ color: 'Black' }} as="a" header>
@@ -53,7 +53,7 @@ export default ({ token }) => (
           </center>
         </Link>
 
-        <Link href="/cart" passHref>
+        <Link href="/cart" passHref prefetch={true}>
           <Menu.Item style={{ color: 'Black' }} position="right" name="cart">
             <Icon name="cart" />
             Cart
