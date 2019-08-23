@@ -22,12 +22,13 @@ export default ({ products }) => (
       style={{
         marginTop: '150px',
         position: 'relative',
-        height: '450px',
-        width: '900px'
+        height: '300px',
+        width: '700px'
       }}
       items={mapProductsToItems(products)}
-      itemsPerRow="4"
+      itemsPerRow="3"
       stackable
+      centered={true}
     />
   </center>
 )

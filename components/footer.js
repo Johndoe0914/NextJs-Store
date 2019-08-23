@@ -5,18 +5,17 @@ const Footer = () => (
   <Fragment>
     <footer
       style={{
-        position: 'absolute',
+        position: 'relative',
         height: '175px',
         width: '100%',
         color: 'white',
         backgroundColor: 'black',
-        marginBottom: '0',
-        marginTop: '100px'
+        marginTop: '35%'
       }}
     >
       <div style={{ paddingLeft: '100px', paddingTop: '50px' }}>
         <p>Helpful Links</p>
-        <hr />
+
         <ul>
           <li>
             <Link href="/returns">
@@ -26,6 +25,21 @@ const Footer = () => (
           <li>
             <Link href="/policy">
               <a>Privacy Policy</a>
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <center>
+        <div>All rights reserved (c) 2019 LukeWarm.</div>
+      </center>
+      <div
+        style={{ float: 'right', marginTop: '-105px', marginRight: '100px' }}
+      >
+        <p>Social links</p>
+        <ul>
+          <li>
+            <Link href="/">
+              <a>Instagram</a>
             </Link>
           </li>
         </ul>
