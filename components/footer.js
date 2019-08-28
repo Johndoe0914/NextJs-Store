@@ -10,7 +10,7 @@ const Footer = () => (
         width: '100%',
         color: 'white',
         backgroundColor: 'black',
-        marginTop: '35%'
+        marginBottom: '0%'
       }}
     >
       <div style={{ paddingLeft: '100px', paddingTop: '50px' }}>

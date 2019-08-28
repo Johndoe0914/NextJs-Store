@@ -79,7 +79,8 @@ export default class index extends Component {
                 position: 'relative',
                 width: '100%',
                 height: '400px',
-                backgroundColor: 'green'
+                backgroundColor: 'green',
+                marginBottom:"150px"
               }}
             >
               <Carousel

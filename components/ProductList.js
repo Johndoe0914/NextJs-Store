@@ -18,50 +18,55 @@ export default class ProductList extends Component {
   }
   render() {
     return (
-      <div className="wrapper">
+      <div
+        className="wrapper"
+        style={{
+          position: 'relative',
+          height: 'auto',
+          width: '100%',
+          marginBottom: '100px'
+        }}
+      >
         <div>
           <h1>Heading</h1>
         </div>
+
         <center>
           <div
             className="productsContainer"
             style={{
               position: 'relative',
               display: 'flex',
+              width: '1000px',
               height: 'auto',
-              width: '100%'
+              marginTop: '50px'
             }}
           >
             {this.state.products.length > 0
               ? this.state.products.map(product => (
-                  <Link href={`/product?id=${product.id}`}>
-                    <div
-                      key={product.id}
-                      className="card"
+                  // <Link href={`/product?id=${product.id}`}>
+                  <div>
+                    <Card
+                      href={`/product?id=${product.id}`}
                       style={{
-                        position: 'relative',
-                        height: '250px',
-                        width: '250px'
+                        height: '140px',
+                        width: '200px',
+                        marginBottom: '130px'
                       }}
                     >
-                      <div className="productImage">
-                        <img
-                          src={product.image}
-                          alt={product.description}
-                          style={{
-                            position: 'relative',
-                            width: '200px',
-                            height: '200px'
-                          }}
-                        />
-                      </div>
-
-                      <div className="productContent">
-                        <p>{product.name}</p>
-                        <p>{parseInt(product.price)}</p>
-                      </div>
-                    </div>
-                  </Link>
+                      <Image
+                        src={product.image}
+                        wrapped
+                        width="200px"
+                        height="140px"
+                      />
+                      <Card.Content>
+                        <Card.Header>{product.name}</Card.Header>
+                        <Card.Meta>{product.price.toString()}</Card.Meta>
+                      </Card.Content>
+                    </Card>
+                  </div>
+                  // </Link>
                 ))
               : null}
           </div>

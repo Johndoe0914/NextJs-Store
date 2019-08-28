@@ -3,13 +3,13 @@ import ProductList from '../components/ProductList'
 
 import { getProducts } from '../lib/moltin'
 
-const Home = ({ products }) => (
+const Shop = ({ products }) => (
   <Layout title="Shop">
     <ProductList products={products} />
   </Layout>
 )
 
-Home.getInitialProps = async () => {
+Shop.getInitialProps = async () => {
   const { data, included } = await getProducts()
 
   const products = data.map(product => {
@@ -30,4 +30,4 @@ Home.getInitialProps = async () => {
   }
 }
 
-export default Home
+export default Shop

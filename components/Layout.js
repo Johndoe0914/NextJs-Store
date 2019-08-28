@@ -65,7 +65,8 @@ export default class Layout extends React.Component {
           style={{
             marginTop: '100px',
             marginRight: '75px',
-            marginLeft: '75px'
+            marginLeft: '75px',
+            overflowX: 'hidden'
           }}
         >
           {children}
