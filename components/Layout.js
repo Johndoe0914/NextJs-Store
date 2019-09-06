@@ -55,6 +55,10 @@ export default class Layout extends React.Component {
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"
           />
+          <link
+            rel="stylesheet"
+            href="<NODE_MODULES_FOLDER>/react-responsive-carousel/lib/styles/carousel.min.css"
+          />
 
           <title>{title}</title>
         </Head>

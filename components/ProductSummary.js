@@ -8,8 +8,7 @@ export default ({ id, image, name, meta, sku, description }) => (
       position: 'relative',
       width: '500px',
       height: '600px',
-      margin: '',
-      marginBottom: '0px'
+      margin: '50px auto'
     }}
   >
     <Item.Group>

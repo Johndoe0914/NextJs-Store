@@ -53,7 +53,7 @@ export default ({ items, removeFromCart, loading, completed }) => {
         position: 'relative',
         height: '300px',
         width: '500px',
-        margin: 'auto'
+        margin: '100px auto'
       }}
       divided
       items={mapCartItemsToItems(items)}

@@ -10,7 +10,7 @@ export default ({
 }) => (
   <React.Fragment>
     <Divider />
-    <Segment clearing size="large">
+    <Segment clearing size="large" style={{ marginBottom: '100px' }}>
       <strong>Sub total:</strong> {formatted}
       <StripeCheckout
         name="NextJS Demo Store"

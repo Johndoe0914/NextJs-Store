@@ -40,7 +40,7 @@ export default class AddToCart extends React.Component {
         value={quantity}
         onChange={e => this._handleChange(e)}
         action={{
-          color: 'orange',
+          color: 'black',
           content: 'Add to Cart',
           icon: 'plus cart',
           onClick: this._handleSubmit,

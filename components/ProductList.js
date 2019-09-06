@@ -23,49 +23,54 @@ export default class ProductList extends Component {
         style={{
           position: 'relative',
           height: 'auto',
-          width: '100%',
+          width: '100%x',
           marginBottom: '100px'
         }}
       >
-        <div>
-          <h1>Heading</h1>
-        </div>
+        <div>{/* <h1>Heading</h1> */}</div>
 
         <center>
           <div
             className="productsContainer"
             style={{
-              position: 'relative',
               display: 'flex',
               width: '1000px',
               height: 'auto',
-              marginTop: '50px'
+              marginTop: '50px',
+
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              padding: '10px'
             }}
           >
             {this.state.products.length > 0
               ? this.state.products.map(product => (
                   // <Link href={`/product?id=${product.id}`}>
-                  <div>
-                    <Card
-                      href={`/product?id=${product.id}`}
-                      style={{
-                        height: '140px',
-                        width: '200px',
-                        marginBottom: '130px'
-                      }}
-                    >
-                      <Image
-                        src={product.image}
-                        wrapped
-                        width="200px"
-                        height="140px"
-                      />
-                      <Card.Content>
-                        <Card.Header>{product.name}</Card.Header>
-                        <Card.Meta>{product.price.toString()}</Card.Meta>
-                      </Card.Content>
-                    </Card>
-                  </div>
+
+                  <Card
+                    href={`/product?id=${product.id}`}
+                    centered
+                    style={{
+                      height: '140px',
+                      width: '310px',
+                      marginBottom: '130px',
+                      flex: '0 2 23%'
+                    }}
+                  >
+                    <Image
+                      src={product.image}
+                      wrapped
+                      width="300px"
+                      height="140px"
+                    />
+                    <Card.Content>
+                      <Card.Header>{product.name}</Card.Header>
+                      <Card.Meta>
+                        {product.meta.display_price.without_tax.formatted}
+                      </Card.Meta>
+                    </Card.Content>
+                  </Card>
+
                   // </Link>
                 ))
               : null}
